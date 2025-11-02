@@ -33,6 +33,7 @@
 ## Reference
 - Refer tapi bukan modifikasi dari [Template Kang Gare serta ancestor2nya](https://github.com/IloveNooodles/ta-paper-latex-itb)
 - Refer utama dari [Template Proposal 2024](https://github.com/NoHaitch/Template-Proposal-dan-TA-IF-ITB/blob/main/reference/Template-Proposal-2024.pdf)
+- [IEEE Latex Template](https://www.ieee.org/conferences/publishing/templates) 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
