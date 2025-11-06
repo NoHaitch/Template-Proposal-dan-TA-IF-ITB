@@ -1,0 +1,74 @@
+% ------------------------------------------------------------------- %
+%  MAIN DOCUMENT
+%  AUTHOR: Raden Francisco Trianto Bratadiningrat (@NoHaitch)
+%  DATE: 2025-10-28
+% ------------------------------------------------------------------- %
+
+\documentclass[bahasa, 12pt, a4paper, onecolumn, oneside, final]{report}
+
+% ---- Import preamble configs ----
+\input{configs/documentsetup.tex}
+
+% --- PDF Metadata ---
+\makeatletter
+\hypersetup{
+    pdfencoding=auto,
+    psdextra,
+    hidelinks,
+    pdfauthor={\@author},
+    pdftitle={\@title},
+    pdfsubject={\prodi~--~\itb},
+    pdfkeywords={\keywords},
+}
+\makeatother
+
+% ---- Document Layout ----
+\begin{document}
+
+% Cover
+\pagenumbering{roman} 
+\input{contents/0-cover.tex}
+
+% Approval
+\input{contents/1-approval.tex}     % jika satu pembimbing
+\input{contents/1-approval-2.tex}   % jika dua pembimbing
+
+% Statement
+\input{contents/2-statement.tex}
+
+% Abstract
+\input{contents/3-abstract.tex}
+
+% Foreword
+\input{contents/4-foreword.tex}
+
+% Table of Contents - chapters
+\tableofcontents
+
+% List of Appendices
+\listofappendices
+
+% List of Figures (images)
+\listoffigures
+
+% List of Tables
+\listoftables
+
+% Chapters
+\clearpage
+\pagenumbering{arabic}
+
+\input{contents/5-introduction.tex}
+\input{contents/6-literature.tex}
+\input{contents/7-solution.tex}
+\input{contents/8-evaluation.tex}
+\input{contents/9-conclusion.tex}
+
+% Blibliography
+\printbibliography[title={DAFTAR PUSTAKA}]
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+
+% Appendices
+\input{contents/10-appendix.tex}
+
+\end{document}
