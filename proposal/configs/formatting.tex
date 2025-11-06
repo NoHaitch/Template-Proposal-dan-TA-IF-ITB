@@ -2,7 +2,7 @@
 %  FORMATTING CONFIGURATIONS
 %  ~ Customize layout, sectioning, TOC, numbering, and other styles
 %  AUTHOR: Raden Francisco Trianto Bratadiningrat @NoHaitch
-%  DATE: 2025-10-28
+%  DATE: 2025-11-06
 % ------------------------------------------------------------------- %
 
 % --- Paper size (A4) ---
@@ -57,11 +57,11 @@
 
 % --- ToC entry format for chapters ---
 \titlecontents{chapter}
-[0pt]                                                       % No indentation
-{\bfseries}                                                 % Bold chapter entries
-{\makebox[3.8em][l]{\MakeUppercase{Bab}\ \thecontentslabel}} % Prefix in a fixed-width "tab" box
-{}                                                          % No prefix text
-{\mdseries\dotfill\bfseries\contentspage}                   % Dotted leaders + bold page numbers
+[0pt]                                                         % No indentation
+{\bfseries}                                                   % Bold chapter entries
+{\makebox[3.8em][l]{\MakeUppercase{Bab}\ \thecontentslabel}}  % Prefix in a fixed-width "tab" box
+{}                                                            % No prefix text
+{\mdseries\dotfill\bfseries\contentspage}                     % Dotted leaders + bold page numbers
 
 % --- ToC entry format for figures ---
 \titlecontents{figure}
@@ -96,7 +96,7 @@
   \chapter*{\listtablename}
   % \addcontentsline{toc}{chapter}{\listtablename}
   \begingroup
-    \setstretch{1}
+    \setstretch{1.5}
     \setlength{\parskip}{0pt}
     \normalsize
     \@starttoc{lot}
@@ -124,7 +124,6 @@
     \@starttoc{toc}
   \endgroup
 }
-
 
 \newcommand{\listofappendices}{
   \chapter*{\contentsname}
@@ -200,7 +199,7 @@
 \hbadness=99999
 
 % --- Adjust caption positions ---
-\captionsetup[table]{position=above}      % Table captions above
+% \captionsetup[table]{position=above}      % Table captions above
 \captionsetup[image]{position=below}      % Image captions below
 
 % --- Default table formatting macro ---

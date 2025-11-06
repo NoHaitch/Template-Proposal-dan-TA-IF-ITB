@@ -1,7 +1,7 @@
 % ------------------------------------------------------------------- %
 %  LITERATURE REVIEW CHAPTER
 %  AUTHOR: Raden Francisco Trianto Bratadiningrat (@NoHaitch)
-%  DATE: 2025-10-28
+%  DATE: 2025-11-06
 % ------------------------------------------------------------------- %
 
 % ----- JUDUL BAB -----
@@ -42,33 +42,55 @@ Contoh gambar adalah sebagaimana terlihat pada Gambar~\ref{fig:contoh-inline},
 
 Data dapat dilihat pada Tabel~\ref{tab:contoh-merge} berikut.
 
-\begin{table}[!htbp]
-    \centering
-    \DefaultTableFormatting                
-    \caption{Contoh Tabel}
-    \begin{tabularx}{\textwidth}{|c|X|c|}
-        \hline
-        \rowcolor[HTML]{EFEFEF}
-        \textbf{No.} & \textbf{Kegiatan} & \textbf{Waktu Pelaksanaan} \\
-        \hline
+\begin{xltabular}{\textwidth}{|c|l|X|}
+\caption{Tahapan Proses Publikasi Ilmiah}\label{tab:proses-publikasi} \\
 
-        % Multi-row example
-        \multirow{2}{*}{1} & Studi Literatur & Januari 2025 \\
-        \cline{2-3}
-        & Analisis Kebutuhan & Februari 2025 \\
-        \hline
+\hline
+\rowcolor[HTML]{EFEFEF}
+\textbf{No.} & \textbf{Tahapan Proses} & \textbf{Penjelasan} \\
+\hline
+\endfirsthead
+\multicolumn{3}{c}{{\tablename\ \thetable{} Tahapan Proses Publikasi Ilmiah}} \\
+\hline
+\rowcolor[HTML]{EFEFEF}
+\textbf{No.} & \textbf{Tahapan Proses} & \textbf{Penjelasan} \\
+\hline
+\endhead
 
-        % Normal row
-        2 & Perancangan Sistem & Maret 2025 \\
-        \hline
+\hline
+\multicolumn{3}{r}{{Bersambung ke halaman berikutnya}} \\
+\endfoot
 
-        % Multi-column example
-        3 & \multicolumn{2}{c|}{Implementasi dan Pengujian (April–Mei 2025)} \\
-        \hline
+\hline
+\endlastfoot
 
-        % Normal row
-        4 & Dokumentasi & Juni 2025 \\
-        \hline
-    \end{tabularx}
-    \label{tab:contoh-merge}
-\end{table}
+1 & \textbf{\textit{Manuscript Preparation}} & Penulis menyusun manuskrip sesuai panduan dan standar jurnal tujuan. \\
+\hline
+2 & \textbf{\textit{Initial Submission}} & Manuskrip dikirimkan oleh penulis ke jurnal untuk dipertimbangkan proses seleksi. \\
+\hline
+3 & \textbf{\textit{Editorial Screening}} & Editor menilai cakupan, orisinalitas, dan kelayakan dasar manuskrip; manuskrip yang tidak memenuhi kriteria dapat ditolak pada tahap awal (\textit{desk rejection}). \\
+\hline
+4 & \textbf{\textit{Peer Review Selection}} & Editor memilih dan mengundang penelaah ahli yang relevan. \\
+\hline
+5 & \textbf{\textit{Peer Review Evaluation}} & Penelaah secara independen menilai kualitas, metodologi, dan kontribusi ilmiah manuskrip. \\
+\hline
+6 & \textbf{\textit{Reviewer Recommendations}} & Penelaah memberikan rekomendasi penerimaan, revisi, atau penolakan. \\
+\hline
+7 & \textbf{\textit{Editorial Decision}} & Editor menentukan keputusan akhir berdasarkan hasil penelaahan. \\
+\hline
+8 & \textbf{\textit{Decision Communication}} & Editor menyampaikan keputusan dan umpan balik kepada penulis. \\
+\hline
+9 & \textbf{\textit{Author Revisions}} & Penulis melakukan revisi berdasarkan umpan balik yang diberikan. \\
+\hline
+10 & \textbf{\textit{Resubmission}} & Manuskrip revisi dikirimkan kembali oleh penulis. \\
+\hline
+11 & \textbf{\textit{Re-review Process}} & Editor dan/atau penelaah menilai ulang revisi manuskrip. \\
+\hline
+12 & \textbf{\textit{Final Decision}} & Editor membuat keputusan akhir terhadap manuskrip. \\
+\hline
+13 & \textbf{\textit{Production/Copyediting}} & Tim produksi menyunting bahasa, memformat, dan memeriksa naskah sebelum terbit. \\
+\hline
+14 & \textbf{\textit{Publication}} & Artikel dipublikasikan secara resmi, daring atau cetak, dengan DOI. \\
+\hline
+15 & \textbf{\textit{Post-Publication}} & Pembaca dapat memberi umpan balik atau komentar paska-publikasi. \\
+\end{xltabular}
