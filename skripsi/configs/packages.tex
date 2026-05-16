@@ -1,8 +1,7 @@
 % ------------------------------------------------------------------- %
-%  PACKAGES CONFIGURATION
-%  ~ Define packages used in the document
-%  AUTHOR: Raden Francisco Trianto Bratadiningrat @NoHaitch
-%  DATE: 2025-11-06
+%  Packages
+%  AUTHOR: @NoHaitch IF'22
+%  DATE: 2026-05-16
 % ------------------------------------------------------------------- %
 
 % --- Encoding, language ---
@@ -15,11 +14,13 @@
     top=3cm,
     bottom=3cm,
     left=4cm,
-    right=3cm]{geometry}    % Set custom page margins and layout dimensions
+    right=3cm]{geometry}    
+    % Set custom page margins and layout dimensions
 
 % --- Fonts & math ---
 \usepackage{mathptmx}           % Use Times-like font (Times + matching math symbols)
 \usepackage{setspace}           % Control line spacing (e.g., \singlespacing, \onehalfspacing, \doublespacing)
+\usepackage{amssymb}            % Additional math symbols (e.g., \mathbb, \mathcal, \mathfrak)
 
 % --- Sectioning & formatting tools ---
 \usepackage{titlesec}           % Customize section/chapter title format (font, spacing, numbering)
@@ -39,14 +40,15 @@
 \usepackage{listings}           % Display and format source code with syntax highlighting
 \usepackage{parskip}            % Remove paragraph indentation and manage spacing between paragraphs
 \usepackage{afterpage}          % Defer command execution until the current page is finished
-\usepackage{xcolor, colortbl}   % Define colors and apply them to text, tables, or cells
+\usepackage{xcolor}             % Define colors and apply them to text, tables, or cells
+\usepackage{colortbl}           % Define colors and apply them to text, tables, or cells
 \usepackage{relsize}            % Adjust font size relatively (\smaller, \larger, \textsmaller, etc.)
 \usepackage{caption}            % Customize captions for figures and tables
 \usepackage{multirow}           % Create table cells that span multiple rows
+\usepackage{diagbox}            % Create diagonal lines in table cells for multi-dimensional headers 
 \usepackage{float}              % Improved interface for floating objects (figures, tables)
 \usepackage{enumitem}           % Customize list environments (itemize, enumerate) with more control
-
-\usepackage{xltabular}           % Combine features of longtable and tabularx for better table handling
+\usepackage{xltabular}          % Combine features of longtable and tabularx for better table handling
 \keepXColumns
 
 % --- Hyperlinks & citation ---
@@ -58,3 +60,6 @@
 
 % --- Misc utilities ---
 \usepackage{scrwfile}           % Safe file-writing utilities (used internally by KOMA-script or for custom outputs)
+
+% --- Suppres Warnings ---
+\usepackage{silence}

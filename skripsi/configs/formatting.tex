@@ -1,8 +1,7 @@
 % ------------------------------------------------------------------- %
-%  FORMATTING CONFIGURATIONS
-%  ~ Customize layout, sectioning, TOC, numbering, and other styles
-%  AUTHOR: Raden Francisco Trianto Bratadiningrat @NoHaitch
-%  DATE: 2025-11-06
+%  Format Config 
+%  AUTHOR: @NoHaitch IF'22
+%  DATE: 2026-05-16
 % ------------------------------------------------------------------- %
 
 % --- Paper size (A4) ---
@@ -10,6 +9,11 @@
 
 % --- Line spacing ---
 \renewcommand{\baselinestretch}{1.5}    % Set global line spacing to 1.5
+
+% --- Change \large from 14.4pt to 14pt ---
+\makeatletter
+\renewcommand{\large}{\@setfontsize\large{14pt}{17pt}}
+\makeatother
 
 % --- Section numbering depth ---
 \setcounter{secnumdepth}{4}             % Allow numbering up to 4th level (subsubsubsection)
@@ -107,7 +111,7 @@
   \chapter*{\listfigurename}
   \addcontentsline{toc}{chapter}{\MakeUppercase{\listfigurename}}
   \begingroup
-    \setstretch{1}
+    \setstretch{1.5}
     \setlength{\parskip}{0pt}
     \normalsize
     \@starttoc{lof}
@@ -201,9 +205,20 @@
 % --- Adjust caption positions ---
 % \captionsetup[table]{position=above}      % Table captions above
 \captionsetup[image]{position=below}      % Image captions below
+% \captionsetup[table]{skip=10pt}
 
 % --- Default table formatting macro ---
 \newcommand{\DefaultTableFormatting}{
     \renewcommand{\arraystretch}{1.5}     % Row height
     \setlength{\tabcolsep}{10pt}          % Column padding
 }
+
+% --- Todo command ---
+\definecolor{todoorange}{RGB}{255, 140, 0}
+\newcommand{\todo}[1]{{\color{todoorange}\textbf{TODO:} #1}}
+
+\newcommand{\itemtab}{\par\noindent\hangindent=1em\hangafter=1$\bullet$\ }
+
+% --- Stop Single Line ---
+\widowpenalty10000
+\clubpenalty10000
