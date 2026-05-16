@@ -1,8 +1,7 @@
 % ------------------------------------------------------------------- %
-%  PACKAGES CONFIGURATION
-%  ~ Define packages used in the document
-%  AUTHOR: Raden Francisco Trianto Bratadiningrat @NoHaitch
-%  DATE: 2025-11-19
+%  Packages
+%  AUTHOR: @NoHaitch IF'22
+%  DATE: 2026-05-16
 % ------------------------------------------------------------------- %
 
 % --- Encoding, language ---
@@ -10,16 +9,18 @@
 \usepackage[T1]{fontenc}        % Output font encoding (T1) for correct accented characters & hyphenation
 \usepackage[bahasa]{babel}      % Apply Bahasa Indonesia language conventions (captions, hyphenation, dates)
 
-% --- Page layout ---
+% --- Page layout / Margin ---
 \usepackage[
-    top=\defaultmargin,
-    bottom=\defaultmargin,
-    left=\guttermargin,
-    right=\defaultmargin]{geometry}    % Set custom page margins and layout dimensions
+    top=3cm,
+    bottom=3cm,
+    left=4cm,
+    right=3cm]{geometry}    
+    % Set custom page margins and layout dimensions
 
 % --- Fonts & math ---
 \usepackage{mathptmx}           % Use Times-like font (Times + matching math symbols)
 \usepackage{setspace}           % Control line spacing (e.g., \singlespacing, \onehalfspacing, \doublespacing)
+\usepackage{amssymb}            % Additional math symbols (e.g., \mathbb, \mathcal, \mathfrak)
 
 % --- Sectioning & formatting tools ---
 \usepackage{titlesec}           % Customize section/chapter title format (font, spacing, numbering)
@@ -35,17 +36,18 @@
 \usepackage{array}              % Extended column types and formatting options for tables
 \usepackage{longtable}          % Create tables that span multiple pages
 \usepackage{booktabs}           % Professional-quality table lines (\toprule, \midrule, \bottomrule)
-\usepackage{makecell}           % Enhanced cell formatting in tables (line breaks, multi-line cells)
 \usepackage{tabularx}           % Tables with auto-stretch columns for flexible widths
 \usepackage{listings}           % Display and format source code with syntax highlighting
 \usepackage{parskip}            % Remove paragraph indentation and manage spacing between paragraphs
 \usepackage{afterpage}          % Defer command execution until the current page is finished
-\usepackage{xcolor, colortbl}   % Define colors and apply them to text, tables, or cells
+\usepackage{xcolor}             % Define colors and apply them to text, tables, or cells
+\usepackage{colortbl}           % Define colors and apply them to text, tables, or cells
 \usepackage{relsize}            % Adjust font size relatively (\smaller, \larger, \textsmaller, etc.)
 \usepackage{caption}            % Customize captions for figures and tables
 \usepackage{multirow}           % Create table cells that span multiple rows
+\usepackage{diagbox}            % Create diagonal lines in table cells for multi-dimensional headers 
 \usepackage{float}              % Improved interface for floating objects (figures, tables)
-
+\usepackage{enumitem}           % Customize list environments (itemize, enumerate) with more control
 \usepackage{xltabular}          % Combine features of longtable and tabularx for better table handling
 \keepXColumns
 
@@ -59,3 +61,5 @@
 % --- Misc utilities ---
 \usepackage{scrwfile}           % Safe file-writing utilities (used internally by KOMA-script or for custom outputs)
 
+% --- Suppres Warnings ---
+\usepackage{silence}

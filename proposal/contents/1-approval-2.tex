@@ -1,29 +1,26 @@
 % ------------------------------------------------------------------- %
-%  APPROVAL PAGE
-%  AUTHOR: Raden Francisco Trianto Bratadiningrat (@NoHaitch)
-%  DATE: 2025-10-27
+%  Persetujuan / Approval untuk 2 atau lebih pembimbing
+%  AUTHOR: @NoHaitch IF'22
+%  DATE: 2026-05-16
 % ------------------------------------------------------------------- %
 
 \clearpage
-\pagestyle{empty}
 
 \begin{center}
 
     % --- Title ---
-    % Change to \large (with lowercase 'L') if size is curently to big
-    \Large\bfseries\MakeUppercase{\judulta}
+    \large\bfseries\MakeUppercase{\judulta}
 
     \vfill
 
     % --- Subtitle ---
-    % Change to \large (with lowercase 'L') if size is curently to big
-    \Large \subtitle
+    \large \subtitle
 
     \vfill
 
     % --- Author ---
-    \large Oleh \\[0.3em]
-    \MakeUppercase{\penulis} \\[0.2em]
+    \normalsize Oleh \\[0.3em]
+    \large \MakeUppercase{\penulis} \\[0.2em]
     NIM: \nim \\
 
     % --- Institution ---
@@ -35,19 +32,28 @@
     \vfill
 
     % --- Approval ---
-    Bandung, \tanggallengkap\\
-    Mengetahui,
+    Telah disetujui dan disahkan sebagai \subtitle \\ 
+    di Bandung, pada tanggal \tanggal~\bulan~\tahun
 
     \vspace{0.5cm}
 
     \noindent
-    \begin{tabular}{>{\centering\arraybackslash}p{0.45\textwidth} >{\centering\arraybackslash}p{0.45\textwidth}}
-        Pembimbing I, & Pembimbing II, \\[3.5cm]
-        \underline{\pembimbing} & \underline{\pembimbingdua} \\
-        NIP. \nip & NIP. \nipdua \\
+    % 2 Pembimbing
+    % \begin{tabular}{>{\centering\arraybackslash}p{0.45\textwidth} >{\centering\arraybackslash}p{0.45\textwidth}}
+    %     Pembimbing I, & Pembimbing II, \\[3cm]
+    %     \underline{\pembimbing} & \underline{\pembimbingdua} \\
+    %     NIP. \nip & NIP. \nipdua \\
+    % \end{tabular}
+
+    % 3 Pembimbing
+    \begin{tabular}{>{\centering\arraybackslash}p{0.30\textwidth} >{\centering\arraybackslash}p{0.30\textwidth} >{\centering\arraybackslash}p{0.30\textwidth}}
+        Pembimbing I, & Pembimbing II, & Pembimbing III \\[3cm]
+        \underline{\pembimbing} & \underline{\pembimbingdua} & \underline{\pembimbingtiga} \\
+        NIP. \nip & NIP. \nipdua & NIP. \niptiga \\
     \end{tabular}
 
-
+    \vfill
+    
 \end{center}
 
 \clearpage
