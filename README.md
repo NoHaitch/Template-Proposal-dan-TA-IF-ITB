@@ -4,7 +4,7 @@
 
 <br />
 <div align="center">
-  <h1 align="center">Template Proposal & TA IF ITB</h1>
+  <h1 align="center">Template Proposal & Skripsi TA IF ITB</h1>
 
   <p align="center">
     <h3><a href="https://github.com/new?template_name=Template-Proposal-dan-TA-IF-ITB&template_owner=NoHaitch">Use this template</a></h3>
