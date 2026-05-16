@@ -6,14 +6,12 @@
 <div align="center">
   <h1 align="center">Template Proposal & TA IF ITB</h1>
 
-  <h3>FYI Masih template tahun 2024/2025</h3>
-
   <p align="center">
     <h3><a href="https://github.com/new?template_name=Template-Proposal-dan-TA-IF-ITB&template_owner=NoHaitch">Use this template</a></h3>
     <br/>
     <strong>Ada kesalahan? Bikin Fork -> Buat Pull Request</strong>
     <br/>
-    <strong>Kalo ngga ya... buat repo baru aja :)</strong>
+    <strong>Kalo nggak ya... buat repo baru aja :)</strong>
 <br>
 <br>
 
@@ -25,7 +23,7 @@
 <div align="center" id="contributor">
   <strong>
     <h3>Made By:</h3>
-    <h3>Francisco Trianto ~ Ciko IF'22</h3>
+    <h3>NoHaitch ~ Ciko IF'22</h3>
   </strong>
   <br>
 </div>
