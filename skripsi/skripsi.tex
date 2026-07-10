@@ -52,7 +52,10 @@
 \input{contents/4-foreword.tex}
 
 % Table of Contents - chapters
-\tableofcontents
+\begingroup
+    \setcounter{tocdepth}{2} % Depth 
+    \tableofcontents
+\endgroup
 
 % List of Appendices
 \listofappendices
@@ -65,6 +68,8 @@
 % List of Tables
 \listoftables
 % Note: Hapus ini jika tidak ada tabel
+
+\input{contents/glossary.tex}
 
 \clearpage
 \pagenumbering{arabic}

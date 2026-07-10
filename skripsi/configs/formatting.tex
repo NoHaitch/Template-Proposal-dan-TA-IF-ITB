@@ -61,25 +61,39 @@
 
 % --- ToC entry format for chapters ---
 \titlecontents{chapter}
-[0pt]                                                         % No indentation
-{\bfseries}                                                   % Bold chapter entries
-{\makebox[3.8em][l]{\MakeUppercase{Bab}\ \thecontentslabel}}  % Prefix in a fixed-width "tab" box
-{}                                                            % No prefix text
-{\mdseries\dotfill\bfseries\contentspage}                     % Dotted leaders + bold page numbers
+[0pt]                                                         
+{\bfseries}                                                   
+{\makebox[4em][l]{\MakeUppercase{Bab}\ \thecontentslabel}} 
+{}                                                            
+{\mdseries\dotfill\bfseries\contentspage}                     
 
-% --- ToC entry format for figures ---
+\titlecontents{section}
+[4em]                                                       
+{}                                                            
+{\contentslabel{2.3em}}                                       
+{}                                                            
+{\mdseries\dotfill\contentspage}        
+
+\newlength{\lofnumwidth}
+\setlength{\lofnumwidth}{5.8em}
+\newlength{\lotnumwidth}
+\setlength{\lotnumwidth}{5.3em}
+
+% --- Daftar Gambar ---
 \titlecontents{figure}
-[0pt]{}
-{Gambar~\thecontentslabel.\quad}
-{}
-{\mdseries\dotfill\bfseries\contentspage}
+  [0pt] %
+  {}    %
+  {\makebox[\lofnumwidth][l]{Gambar~\thecontentslabel.}} %
+  {}    %
+  {\dotfill\contentspage} %
 
-% --- ToC entry format for tables ---
+% --- Daftar Tabel ---
 \titlecontents{table}
-[0pt]{}
-{Tabel~\thecontentslabel.\quad}
-{}
-{\mdseries\dotfill\bfseries\contentspage}
+  [0pt] 
+  {}    
+  {\makebox[\lotnumwidth][l]{Tabel~\thecontentslabel.}} 
+  {}    
+  {\dotfill\contentspage}
 
 % --- Single-spaced list entries only ---
 \newcommand{\SingleSpacingEntriesOnly}[1]{%
@@ -203,22 +217,99 @@
 \hbadness=99999
 
 % --- Adjust caption positions ---
-% \captionsetup[table]{position=above}      % Table captions above
-\captionsetup[image]{position=below}      % Image captions below
-% \captionsetup[table]{skip=10pt}
+\captionsetup[image]{position=below, skip=2pt}      % Image captions below
+
+\captionsetup[table]{position=above, skip=2pt}
+
+\captionsetup{
+  font=small,
+  singlelinecheck=true, 
+  format=hang,
+  justification=justified,
+  labelsep=period,
+  margin=0pt,
+  skip=12pt
+}
 
 % --- Default table formatting macro ---
 \newcommand{\DefaultTableFormatting}{
-    \renewcommand{\arraystretch}{1.5}     % Row height
+    \renewcommand{\arraystretch}{1}     % Row height
     \setlength{\tabcolsep}{10pt}          % Column padding
 }
 
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
 % --- Todo command ---
 \definecolor{todoorange}{RGB}{255, 140, 0}
-\newcommand{\todo}[1]{{\color{todoorange}\textbf{TODO:} #1}}
+\newcommand{\todo}[1]{{\color{todoorange}\textbf{Masih Bentuk DRAF KASAR atau Todo:} #1}}
 
 \newcommand{\itemtab}{\par\noindent\hangindent=1em\hangafter=1$\bullet$\ }
 
-% --- Stop Single Line ---
-\widowpenalty10000
-\clubpenalty10000
+\newcommand{\passmark}{\ding{51}}
+
+
+% Space after table/image
+\setlength{\textfloatsep}{24pt plus 4pt minus 2pt}
+\setlength{\floatsep}{24pt plus 4pt minus 2pt}
+\setlength{\intextsep}{24pt plus 4pt minus 2pt}
+
+\usepackage{etoolbox}
+\AtBeginEnvironment{xltabular}{%
+  \vspace{24pt plus 4pt minus 2pt}% % Jarak sebelum tabel
+}
+\AtEndEnvironment{xltabular}{%
+  \vspace{24pt plus 4pt minus 2pt}% % Jarak setelah tabel
+}
+
+% Listings Setup
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+  columns=fullflexible,
+  keepspaces=true,
+  breaklines=true,
+  breakatwhitespace=true,
+  captionpos=t,         
+  numbers=none,
+  frame=single,
+  aboveskip=12pt,       
+  belowskip=12pt        
+}
+
+\lstdefinelanguage{json}{
+  basicstyle=\ttfamily\scriptsize,
+  showstringspaces=false,
+  breaklines=true,
+  literate=
+   *{:}{{{\color{black}{:}}}}{1}
+    {,}{{{\color{black}{,}}}}{1}
+    {\{}{{{\color{black}{\{}}}}{1}
+    {\}}{{{\color{black}{\}}}}}{1}
+    {[}{{{\color{black}{[}}}}{1}
+    {]}{{{\color{black}{]}}}}{1}
+}
+
+\lstdefinelanguage{console}{
+  basicstyle=\ttfamily\scriptsize,
+  showstringspaces=false,
+  breaklines=true,
+  keepspaces=true,
+  columns=fullflexible,
+  morecomment=[l]{\#},
+  literate=
+    {[PASS]}{{\passmark}}1
+}
+
+\lstdefinelanguage{pathlisting}{
+  basicstyle=\ttfamily\small,
+  showstringspaces=false,
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true
+}
+
+% Stop Single Line
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+
+\AddToHook{env/xltabular/begin}{\small}

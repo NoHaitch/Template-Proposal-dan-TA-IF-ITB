@@ -17,8 +17,6 @@
 <br>
 <br>
 
-[![MIT License][license-shield]][license-url]
-
   </p>
 </div>
 

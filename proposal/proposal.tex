@@ -25,6 +25,9 @@
 % ---- Document Layout ----
 \begin{document}
 
+% Prevent hyphenation 
+\hyphenpenalty=100000 \exhyphenpenalty=100000 \sloppy  
+
 % Cover
 \pagenumbering{roman} 
 \input{contents/0-cover.tex}
@@ -34,7 +37,10 @@
 \input{contents/1-approval-2.tex}   % jika dua pembimbing
 
 % Table of Contents - chapters
-\tableofcontents
+\begingroup
+    \setcounter{tocdepth}{2} % ganti ini buat kedalaman daftar isi yang ditampilin 
+    \tableofcontents
+\endgroup
 
 % List of Appendices
 \listofappendices
@@ -44,6 +50,8 @@
 
 % List of Tables
 \listoftables
+
+\input{contents/glossary.tex}
 
 \clearpage
 \pagenumbering{arabic}
@@ -57,6 +65,7 @@
 
 % Blibliography
 \printbibliography[title={DAFTAR PUSTAKA}]
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
 
 % Appendices
 \input{contents/6-appendix.tex}
