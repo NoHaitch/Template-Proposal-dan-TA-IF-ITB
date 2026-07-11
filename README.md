@@ -4,17 +4,22 @@
 
 <br />
 <div align="center">
-  <h1 align="center">Template Proposal & Skripsi TA IF ITB</h1>
+  <h1 align="center">Template Latex Proposal & Laporan Tugas Akhir IF ITB</h1>
 
+
+  <u><strong style="font-size: 20px;">Unofficial Version / Versi Tidak Resmi</strong></u>
+  <br/>
+  <br/>
+  <strong>(dibuat oleh mahasiswa tingkat akhir Program Studi Teknik Informatika, Sekolah Teknik Elektro dan Informatika, Institut Teknologi Bandung)</strong>
+  <br/>
+  <br/>
   <p align="center">
     <h3><a href="https://github.com/new?template_name=Template-Proposal-dan-TA-IF-ITB&template_owner=NoHaitch">Use this template</a></h3>
-    <br/>
-    <strong>Ada kesalahan? Bikin Fork -> Buat Pull Request</strong>
-    <br/>
-    <strong>Kalo nggak ya... buat repo baru aja :)</strong>
-<br>
-<br>
-
+  Ada kesalahan? Bikin Fork -> Buat Pull Request.
+  <br/>
+  Atau buat repo baru aja :)
+  <br>
+  <br>
   </p>
 </div>
 
@@ -70,6 +75,6 @@ Atau bisa melihat dokumentasi pada [tautan ini](https://www.tug.org/texlive/acqu
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-[license-shield]: https://img.shields.io/badge/License-GNU3-yellow
-[license-url]: https://github.com/NoHaitch/Template-Proposal-dan-TA-IF-ITB/blob/main/LICENSE
+## Note
+
+Warning Latex hasil clone dapat diabaikan saja.
